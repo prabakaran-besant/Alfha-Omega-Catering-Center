@@ -1,0 +1,288 @@
+/* ==========================================================================
+   Alpha Omega Catering & Idly Center — Responsive Stylesheet
+   Breakpoints: Desktop (>1200px) / Laptop (992-1200px) / Tablet (768-991px) / Mobile (<768px)
+   ========================================================================== */
+
+/* ---------- Laptop ---------- */
+@media (max-width: 1199.98px) {
+  :root {
+    --section-padding: 70px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.4rem;
+  }
+
+  .section-heading h2 {
+    font-size: 2.1rem;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1.2fr 1fr 1fr;
+  }
+
+  .footer-col.footer-newsletter {
+    grid-column: 1 / -1;
+    max-width: 380px;
+  }
+}
+
+/* ---------- Tablet ---------- */
+@media (max-width: 991.98px) {
+  :root {
+    --section-padding: 56px;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: min(320px, 82vw);
+    background: var(--color-cream-light);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    padding: 100px 30px 30px;
+    box-shadow: var(--shadow-lg);
+    transform: translateX(100%);
+    transition: transform var(--transition);
+    overflow-y: auto;
+    z-index: 1050;
+  }
+
+  .nav-menu.is-open {
+    transform: translateX(0);
+  }
+
+  .nav-menu a {
+    display: block;
+    width: 100%;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .nav-menu .has-dropdown {
+    width: 100%;
+  }
+
+  .dropdown-menu {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    box-shadow: none;
+    display: none;
+    width: 100%;
+    padding: 0 0 0 14px;
+    transition: none;
+  }
+
+  .has-dropdown.is-open .dropdown-menu {
+    display: block;
+  }
+
+  .has-dropdown:hover .dropdown-menu,
+  .has-dropdown:focus-within .dropdown-menu {
+    transform: none;
+    left: auto;
+  }
+
+  .nav-cta {
+    gap: 8px;
+  }
+
+  .nav-cta .btn {
+    padding: 8px 14px;
+    font-size: 0.8rem;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(43, 26, 16, 0.5);
+    z-index: 999;
+  }
+
+  .nav-overlay.is-visible {
+    display: block;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .hero-content {
+    order: 2;
+    text-align: center;
+  }
+
+  .hero-content p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .signature-grid,
+  .menu-grid,
+  .testimonial-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .feature-row {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 34px;
+  }
+
+  .stats-row {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 30px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 160px);
+  }
+
+  .gallery-item-1 {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 575.98px) {
+  :root {
+    --section-padding: 44px;
+  }
+
+  .container {
+    padding: 0 18px;
+  }
+
+  .hero-content h1 {
+    font-size: 1.9rem;
+  }
+
+  .section-heading h2 {
+    font-size: 1.6rem;
+  }
+
+  .brand-name {
+    font-size: 0.95rem;
+  }
+
+  .brand-icon {
+    width: 44px;
+    height: 44px;
+  }
+
+  .nav-cta {
+    gap: 6px;
+  }
+
+  .nav-cta .btn {
+    padding: 8px 10px;
+  }
+
+  .nav-cta-phone-text {
+    display: none;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .signature-grid,
+  .menu-grid,
+  .testimonial-grid,
+  .feature-row,
+  .stats-row {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-card {
+    flex-direction: column;
+  }
+
+  .menu-card .menu-thumb {
+    width: 100%;
+    height: 160px;
+  }
+
+  .location-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .location-card .map-thumb {
+    width: 100%;
+    height: 140px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 130px);
+  }
+
+  .gallery-item-1 {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    padding-right: 0;
+    padding-bottom: 80px;
+  }
+
+  .page-banner h1 {
+    font-size: 1.9rem;
+  }
+
+  .error-page .error-code {
+    font-size: 4.5rem;
+  }
+
+  .form-card {
+    padding: 24px 18px;
+  }
+
+  .back-to-top {
+    right: 16px;
+    bottom: 16px;
+    width: 42px;
+    height: 42px;
+  }
+
+  .whatsapp-float {
+    right: 16px;
+    bottom: 70px;
+    width: 48px;
+    height: 48px;
+    font-size: 1.4rem;
+  }
+}
